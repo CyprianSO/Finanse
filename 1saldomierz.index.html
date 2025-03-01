@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menedżer Salda</title>
+    <link rel="stylesheet" href="saldomierz.style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Saldo konta: <span id="saldo">0 zł</span></h1>
+            <button id="edytuj-saldo">EDYTUJ</button>
+        </div>
+        <div class="actions">
+            <button id="dodaj">+</button>
+            <button id="odejmij">-</button>
+        </div>
+        <button id="historia" class="historia-button">Historia</button>
+        <table id="historia-tabela">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Opis</th>
+                    <th>Kwota</th>
+                    <th>Saldo po operacji</th>
+                </tr>
+            </thead>
+            <tbody id="lista-historii">
+                </tbody>
+        </table>
+
+        <div id="saldo-input-container" style="display: none;">
+            <input type="number" id="nowe-saldo" placeholder="Nowe saldo">
+            <button id="zatwierdz-saldo">Zatwierdź</button>
+            <button class="zamknij-saldo-input">x</button>
+        </div>
+        <div id="input-container-dodaj" style="display: none;">
+            <h2>Dodaj</h2>
+            <label for="kwota-dodaj">Kwota:</label>
+            <input type="number" id="kwota-dodaj">
+            <label for="opis-dodaj">Opis:</label>
+            <input type="text" id="opis-dodaj">
+            <button id="zatwierdz-dodaj">Aktualizuj saldo</button>
+            <button class="zamknij-dodaj">x</button>
+        </div>
+        <div id="input-container-odejmij" style="display: none;">
+            <h2>Odejmij</h2>
+            <label for="kwota-odejmij">Kwota:</label>
+            <input type="number" id="kwota-odejmij">
+            <label for="opis-odejmij">Opis:</label>
+            <input type="text" id="opis-odejmij">
+            <button id="zatwierdz-odejmij">Aktualizuj saldo</button>
+            <button class="zamknij-odejmij">x</button>
+        </div>
+    </div>
+
+    <script src="saldomierz.script.js"></script>
+</body>
+</html>
